@@ -1,26 +1,48 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props){
+    super(props)
+  }
+
+  render(){
+    return (
+      <div className="app">
+        <div className="view color1 active">
+          <div className="header"><i className="fas fa-bars"></i></div>
+          <div className="main">
+            Home
+          </div>
+        </div>
+        <div className="view color2">
+          <div className="header"><i className="fas fa-times"></i></div>
+          <div className="main">
+            Cart
+          </div>
+        </div>
+        <div className="view color3">
+          <div className="header"><i className="fas fa-times"></i></div>
+          <div className="main">
+            Order
+          </div>
+        </div>
+        <div className="view color4">
+          <div className="header"><i className="fas fa-times"></i></div>
+          <div className="main">
+            Login
+          </div>
+        </div>
+        <div className="view color5">
+          <div className="header"><i className="fas fa-times"></i></div>
+          <div className="main">
+            Contact
+          </div>
+        </div>
+	    </div>
+    );
+  }
 }
 
 export default App;
